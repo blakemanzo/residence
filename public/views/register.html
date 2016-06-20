@@ -1,0 +1,46 @@
+<div class="register-wrapper md-whiteframe-z1">
+<div layout="row" layout-align="center center">
+	<h1 class="register-head">Register</h1>
+</div>
+
+<div class="register-inner">
+<div layout layout-sm="column">
+<md-input-container flex>
+        <label>ISP</label>
+        <md-select ng-model="isp">
+          <md-option ng-repeat="isp in register.isps" value="{{ isp }}">{{ isp }}</md-option>
+        </md-select>
+</md-input-container>
+<md-input-container flex>
+<label>Email Address</label>
+<input ng-model="email">
+</md-input-container>
+</div>
+<div layout layout-sm="column">
+	<md-input-container flex>
+	<label>Password</label>
+	<input ng-model="user.password">
+</md-input-container>
+<md-input-container flex>
+<label>Confirm Password</label>
+<input ng-model="user.confirmpassword">
+</md-input-container>
+</div>
+<div layout layout-sm="column">
+	<md-input-container flex>
+	<label>Billing Start Date</label>
+	<input ng-model="user.startdate">
+</md-input-container>
+<md-input-container flex>
+<label>Bandwidth Limit</label>
+<input ng-model="user.bandwidthlimit">
+</md-input-container>
+</div>
+
+<div layout="row" layout-align="center center">
+<md-button ui-sref="login" class="register-cta md-primary md-raised">Register</md-button>
+</div>
+
+</div>
+
+</div>

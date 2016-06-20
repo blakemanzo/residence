@@ -1,0 +1,98 @@
+<residence-menu></residence-menu>
+
+<div class="overview-wrapper md-whiteframe-z2">
+
+<donut stroke="'#fff'" width="300" height="300" radius="150" property="'value'" colours="donutColours"
+                   mousemove="openTooltip(model)" mouseleave="closeTooltip()"
+                   ng-model="itemsModel"></donut>
+
+
+<div class="col-md-12">
+<a ui-sref="main" class="btn md-raised btn-lg">Back to Overview</a>
+</div>
+<div class="col-md-6">
+<!-- <div ng-repeat="item in bottom.items">{{ item }}</div> 
+<div ng-repeat="item in bottom.itemsModel">{{ item }}</div> -->
+
+    <div class="item donut-item" ng-repeat="item in bottom.itemsModel">
+        <label for="first">{{ item.name }}</label>
+        <input id="first" type="number" ng-model="item.value" />
+    	<!-- <div class="colour colour-a" style="height: {{ item.$value }}px"></div> -->
+    </div>
+    <a class="btn md-raised btn-lg" ng-click="bottom.updateItems(bottom.itemsModel);">Update</a>
+</div>
+
+<!--     <div class="item">
+        <label for="first">1st:</label>
+        <input id="first" type="number" ng-model="bottom.itemsModel[0].$value" />
+    </div> -->
+
+<div class="col-md-6">
+
+<h2>Preview</h2>
+
+<!-- <tooltip ng-model="selectedModel"></tooltip> -->
+<!-- 
+<div class="colour colour-a">A</div>
+<div class="colour colour-b">B</div>
+<div class="colour colour-c">C</div>
+<div class="colour colour-d">D</div> -->
+</div>
+
+</div>
+<!-- <pie-chart data="data" options="options"></pie-chart> -->
+
+    <!-- 
+
+    <section class="container col-md-6">
+
+        <section class="app" ng-controller="DonutController">
+
+            <donut stroke="'#fff'" width="300" height="300" radius="50" property="'value'" colours="donutColours"
+                   mousemove="openTooltip(model)" mouseleave="closeTooltip()"
+                   ng-model="donutModel">
+
+                <tooltip ng-model="selectedModel"></tooltip>
+
+           </donut>
+
+
+    <legend>
+    <section class="legend">
+
+    <div class="item">
+        <label for="first">1st:</label>
+        <input id="first" type="number" ng-model="donutModel[0].value" />
+    </div>
+
+    <div class="item">
+        <label for="second">2nd:</label>
+        <input id="second" type="number" ng-model="donutModel[1].value" />
+    </div>
+
+    <div class="item">
+        <label for="third">3rd:</label>
+        <input id="third" type="number" ng-model="donutModel[2].value" />
+    </div>
+
+    <div class="item">
+        <label for="fourth">4th:</label>
+        <input id="fourth" type="number" ng-model="donutModel[3].value" />
+    </div>
+
+    <div class="item">
+        <label for="fifth">5th:</label>
+        <input id="fifth" type="number" ng-model="donutModel[4].value" />
+    </div>
+
+    <div class="item modify-all" ng-click="setValues()">
+        Random
+    </div>
+
+</section>
+                
+            </legend>
+
+        </section>
+
+    </section> -->

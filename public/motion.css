@@ -1,0 +1,253 @@
+/* Enter and Leave Animation */
+.ng-enter       { 
+  z-index: 8888; 
+}
+
+.ng-leave       { 
+  z-index: 9999; 
+}
+
+.ng-enter-stagger {
+  /* 100ms delay between each successive animation */
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  /* If stagger fails, set duration to avoid CSS inheritance */
+   -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+}
+
+@-webkit-keyframes slideFadeInTop {
+    from    { opacity: 0; -webkit-transform: translateY(-80px) scale(0.5,0.5);}
+    to      { opacity: 1; -webkit-transform: translateY(0px) scale(1,1);}
+}
+
+@keyframes slideFadeInTop {
+    from    { opacity: 0; transform: translateY(-80px) scale(0.5,0.5);}
+    to      { opacity: 1; transform: translateY(0px) scale(1,1);}
+}
+
+@-webkit-keyframes slideFadeInLeft {
+    from    { opacity: 0; -webkit-transform: scale(0.1,0.1);}
+    to      { opacity: 1; -webkit-transform: scale(1,1);}
+}
+
+@keyframes slideFadeInLeft {
+    from    { opacity: 0; transform: scale(0.1,0.1);}
+    to      { opacity: 1; transform: scale(1,1);}
+}
+
+@-webkit-keyframes fadeInTop {
+    from    { opacity: 0; }
+    to      { opacity: 1; }
+}
+
+@keyframes fadeInTop {
+    from    { opacity: 0; }
+    to      { opacity: 1; }
+}
+
+/* Page Transitions */
+/* left */
+.page-left.ng-enter { 
+  animation:slideInLeft 0.5s both cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.page-left.ng-leave { 
+  animation:slideOutLeft 0.5s both cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+/* right */
+.page-right.ng-enter {
+  animation:slideInRight 0.5s both cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-right.ng-leave {
+  animation:slideOutLeft 0.5s both cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* top */
+.page-top.ng-enter {
+  animation:slideInTop 0.5s both cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-top.ng-leave {
+  animation:slideOutTop 0.5s both cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* bottom */
+.page-bottom.ng-enter {
+  animation:slideInBottom 0.5s both cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-bottom.ng-leave {
+  animation:slideOutBottom 0.5s both cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@-webkit-keyframes slideInLeft {
+    from    { -webkit-transform:translateX(-100%); }
+    to      { -webkit-transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+    from    { -webkit-transform:translateX(-100%); transform:translateX(-100%); }
+    to      { -webkit-transform: translateX(0); transform: translateX(0); }
+}
+
+@-webkit-keyframes slideOutLeft {
+    from    { -webkit-transform:translateX(0%); }
+    to      { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes slideOutLeft {
+    from    { -webkit-transform:translateX(0); transform:translateX(0); }
+    to      { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(100%); }
+    to      { -webkit-transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from    { -webkit-transform:translateX(100%); transform:translateX(100%); }
+    to      { -webkit-transform: translateX(0); transform: translateX(0); }
+}
+
+@-webkit-keyframes slideOutRight {
+    from    { -webkit-transform:translateX(0); }
+    to      { -webkit-transform: translateX(100%); }
+}
+
+@keyframes slideOutRight {
+    from    { -webkit-transform:translateX(0); transform:translateX(0); }
+    to      { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+@-webkit-keyframes slideInTop {
+    from    { -webkit-transform:translateY(-100%); }
+    to      { -webkit-transform: translateY(0); }
+}
+
+@keyframes slideInTop {
+    from    { -webkit-transform:translateY(-100%); transform:translateY(-100%); }
+    to      { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+@-webkit-keyframes slideOutTop {
+    from    { -webkit-transform:translateY(0%); }
+    to      { -webkit-transform: translateY(-100%); }
+}
+
+@keyframes slideOutTop {
+    from    { -webkit-transform:translateY(0); transform:translateY(0); }
+    to      { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes slideInBottom {
+    from    { -webkit-transform:translateY(100%); }
+    to      { -webkit-transform: translateY(0); }
+}
+
+@keyframes slideInBottom {
+    from    { -webkit-transform:translateY(100%); transform:translateY(100%); }
+    to      { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+@-webkit-keyframes slideOutBottom {
+    from    { -webkit-transform:translateY(0); }
+    to      { -webkit-transform: translateY(100%); }
+}
+
+@keyframes slideOutBottom {
+    from    { -webkit-transform:translateY(0); transform:translateY(0); }
+    to      { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+/* Loading State */
+
+three-bounce-spinner {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.three-bounce-spinner {
+    margin: 0 auto;
+    width: 70px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+}
+.data-loading .three-bounce-spinner {
+  top: 10%;
+}
+.three-bounce-spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+    animation: bouncedelay 1.4s infinite ease-in-out both;
+}
+.three-bounce-spinner .bounce1 {
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s;
+}
+.three-bounce-spinner .bounce2 {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s;
+}
+@-webkit-keyframes bouncedelay {
+    0%, 100%, 80% {
+    -webkit-transform: scale(0);
+}
+40% {
+    -webkit-transform: scale(1);
+}
+}@keyframes bouncedelay {
+    0%, 100%, 80% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}
+40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+}
+
+pulse-spinner {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.pulse-spinner {
+    width: 40px;
+    height: 40px;
+    margin: 50px auto;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: scaleout 1s infinite ease-in-out;
+    animation: scaleout 1s infinite ease-in-out;
+}
+@-webkit-keyframes scaleout {
+    0% {
+    -webkit-transform: scale(0);
+}
+100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+}
+}@keyframes scaleout {
+    0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}
+100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 0;
+}
+}

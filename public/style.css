@@ -1,0 +1,120 @@
+.page-main, .page-register, .page-login, .page-overview, .page-analytics {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #f5f5f5;
+	z-index: 3;
+}
+.page-main, .page-register, .page-login {
+	background-image: url("img/windows.jpg");
+	background-size: cover;
+	background-position: top;
+}
+.start-head {
+	font-size: 3em;
+	padding-top: 20%;
+	text-align: center;
+	color: #f5f5f5;
+}
+.start-cta, .register-cta, .login-cta {
+	background-color: rgb(0,160,215) !important;
+	padding: 5px 25px;
+	font-size: 16px;
+}
+.register-head, .login-head, .configure-head {
+	font-size: 3em;
+	text-align: center;
+	background-color: rgb(0,160,215);
+	color: white;
+	width: 100%;
+	margin: 0;
+	padding: 20px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.register-wrapper, .login-wrapper {
+	max-width: 600px;
+	width: 90%;
+	background: white;
+	border-radius: 5px;
+}
+.register-wrapper {
+	margin: 5% auto 0;
+}
+.login-wrapper {
+	margin: 10% auto 0;
+}
+
+.register-inner, .login-inner {
+	padding: 50px;
+}
+md-toolbar.residence-menu {
+	background-color: rgb(0,160,215);
+	color: white;
+}
+md-toolbar.residence-menu .residence-menu-items {
+	height: 64px;
+	padding-right: 0px;
+}
+md-toolbar.residence-menu .residence-menu-items .md-button {
+    padding: 14px 25px;
+    min-height: 64px;
+    margin: 0;
+    background-color: rgb(0,160,215);
+    background-color: rgba(0,160,215,1);
+}
+md-toolbar.residence-menu .residence-menu-items .md-button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+md-toolbar.residence-menu .residence-head {
+    margin: 0 0 0 25px;
+}
+.overview-wrapper {
+	max-width: 700px;
+	width: 90%;
+	margin: 5% auto 0;
+	background: white;
+}
+.overview-wrapper .table-header, .overview-wrapper .table-row {
+	color: rgb(130,130,130);
+	padding: 20px 40px;
+}
+.overview-wrapper .table-header {
+	border-bottom: 1px solid rgb(230,230,230);
+}
+.overview-wrapper .table-row {
+	border-bottom: 1px solid rgba(230,230,230,0.2);
+}
+.overview-wrapper .overview-configure {
+    position: relative;
+    margin: 0;
+    min-height: 0px;
+    height: 19px;
+    line-height: 19px;
+}
+.configure-wrapper {
+	min-width: 400px;
+}
+.configure-inner {
+	padding: 25px 50px;
+}
+.configure-inner p {
+	color: rgb(90,90,90);
+}
+@media screen and (max-width: 700px) {
+	.configure-wrapper {
+		min-width: 300px;
+	}
+	.register-head, .login-head, .configure-head {
+		font-size: 2em;
+	}
+	.register-inner, .login-inner {
+		padding: 25px;
+	}
+	.overview-wrapper .table-header, .overview-wrapper .table-row {
+		padding: 15px;
+	}
+	.overview-wrapper .table-row, .overview-wrapper .overview-configure {
+		font-size: 12px;
+	}
+}

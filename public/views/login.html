@@ -1,0 +1,25 @@
+<div class="login-wrapper md-whiteframe-z1">
+<div layout="row" layout-align="center center">
+	<h1 class="login-head">Login</h1>
+</div>
+
+<div class="login-inner">
+
+<div layout layout="column" layout-sm="column" layout-wrap>
+	<md-input-container flex="100">
+	<label>Email Address</label>
+	<input ng-model="user.email">
+</md-input-container>
+<md-input-container flex="100">
+<label>Password</label>
+<input ng-model="user.password">
+</md-input-container>
+</div>
+
+<div layout="row" layout-align="center center">
+<md-button ui-sref="overview" class="login-cta md-primary md-raised">Login</md-button>
+</div>
+
+</div>
+
+</div>
